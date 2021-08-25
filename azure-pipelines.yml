@@ -17,5 +17,14 @@ steps:
 
 - script: |
     npm install
-    npm run start
-  displayName: 'npm install and start'
+  displayName: 'npm install'
+
+- script: |
+    echo test
+  displayName: 'npm test'
+- task: Npm@1
+  inputs:
+    command: 'publish'
+    verbose: true
+    publishRegistry: 'useFeed'
+    publishFeed: '6242537c-b703-4f17-bafc-b25055ff802d'
