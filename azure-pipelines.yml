@@ -22,9 +22,11 @@ steps:
 - script: |
     echo test
   displayName: 'npm test'
+
 - task: Npm@1
   inputs:
     command: 'publish'
+    workingDir: '.'
     verbose: true
     publishRegistry: 'useFeed'
-    publishFeed: '6242537c-b703-4f17-bafc-b25055ff802d'
+    publishFeed: 'e09c8b30-079b-4473-a2ed-ff3ee91fb83b/c0f3b220-d82d-4b1a-b579-30a51a9b0e24'
